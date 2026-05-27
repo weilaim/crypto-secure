@@ -1,0 +1,47 @@
+<!-- 导航栏组件 -->
+<nav id="main-nav">
+    <a href="../index.html" class="logo">
+        <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+        </div>
+        <span>CryptoSecure</span>
+    </a>
+    <div class="nav-center">
+        <a href="../index.html" data-page="home">首页</a>
+        <a href="../pages/security.html" data-page="security">安全</a>
+        <a href="../pages/wallet.html" data-page="wallet">钱包</a>
+        <a href="../pages/trust.html" data-page="trust">信任</a>
+        <a href="../pages/about.html" data-page="about">关于</a>
+    </div>
+    <div class="nav-actions">
+        <button class="lang-selector">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+            </svg>
+            中文
+        </button>
+        <a href="#" class="btn-wallet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <path d="M1 10h22"/>
+            </svg>
+            连接钱包
+        </a>
+    </div>
+</nav>
+
+<script>
+    // 高亮当前页面导航
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-center a').forEach(link => {
+        const href = link.getAttribute('href');
+        const pageName = href.split('/').pop();
+        if (pageName === currentPage || (currentPage === '' && pageName === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+</script>

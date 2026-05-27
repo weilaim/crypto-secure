@@ -1,0 +1,22 @@
+# 临时文件和缓存
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 本地服务器文件
+__pycache__/
+*.pyc
+
+# outputs 目录（构建产物，不跟踪）
+outputs/
+
+# 环境变量
+.env
+.env.local

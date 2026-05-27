@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoSecure - 机构级数字资产平台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- 样式 -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+    <!-- 背景装饰 -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    <canvas id="three-bg"></canvas>
+
+    <!-- 导航栏 -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                银行级安全基础设施
+            </div>
+            <h1>
+                您的资产值得拥有
+                <span class="gradient-text">军事级</span> 安全保护
+            </h1>
+            <p>
+                CryptoSecure 为您的数字资产提供机构级安全保障。
+                多签冷存储、AI 威胁检测、SOC 2 Type II 认证，
+                全球 50 万 + 用户信赖之选。
+            </p>
+            <div class="hero-buttons" style="display: flex; gap: 16px;">
+                <a href="#cta" class="btn-primary" style="padding: 14px 28px; font-size: 15px;">
+                    开始保护资产
+                </a>
+                <a href="pages/security.html" class="btn-ghost" style="padding: 14px 28px; font-size: 15px;">
+                    了解更多
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value" data-target="82" data-suffix="亿+">$82亿+</div>
+                    <div class="stat-label">资产管理规模</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" data-target="50" data-suffix="万+">50万+</div>
+                    <div class="stat-label">活跃用户</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">安全事件</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-header">
+                <div class="chart-symbol">
+                    <div class="symbol-icon">₿</div>
+                    <div class="symbol-info">
+                        <h3>比特币</h3>
+                        <span>BTC/USD</span>
+                    </div>
+                </div>
+                <div class="chart-price">
+                    <h4>$67,234.56</h4>
+                    <span class="chart-change up">+2.34%</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+            <div class="chart-tabs">
+                <button class="chart-tab">1小时</button>
+                <button class="chart-tab">24小时</button>
+                <button class="chart-tab active">7天</button>
+                <button class="chart-tab">30天</button>
+                <button class="chart-tab">1年</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 安全特性 -->
+    <section class="security-section" id="security">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    安全至上
+                </span>
+                <h2>企业级安全防护</h2>
+                <p>多层安全基础设施，保护每一笔交易</p>
+            </div>
+
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>多签冷存储</h3>
+                    <p>95% 资产离线存储，3-of-5 多签授权机制保障每一次提取安全。</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>AI 威胁检测</h3>
+                    <p>机器学习系统实时分析行为模式，毫秒级识别并阻断可疑活动。</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>7×24 小时监控</h3>
+                    <p>专业安全运营团队全天候监控，自动化预警系统实时响应。</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                        </svg>
+                    </div>
+                    <h3>HSM 加密</h3>
+                    <p>硬件安全模块提供银行级加密，FIPS 140-2 Level 3 认证保护私钥。</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>SOC 2 Type II 认证</h3>
+                    <p>独立第三方审计验证安全控制、可用性和保密性实践。</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <path d="M14 2v6h6"/>
+                            <path d="M16 13H8"/>
+                            <path d="M16 17H8"/>
+                            <path d="M10 9H8"/>
+                        </svg>
+                    </div>
+                    <h3>保险保障</h3>
+                    <p>最高 5 亿美元综合保险，覆盖盗窃和网络安全事件损失。</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="pages/security.html" class="btn-primary">查看全部安全特性</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 钱包集成 -->
+    <section class="wallet-section" id="wallet">
+        <div class="wallet-container container">
+            <div class="wallet-content">
+                <span class="section-tag" style="margin-bottom: 16px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <path d="M1 10h22"/>
+                    </svg>
+                    钱包集成
+                </span>
+                <h2>无缝钱包连接</h2>
+                <p>
+                    连接您喜欢的 Web3 钱包或使用内置安全钱包。
+                    多链支持让您一站式管理所有资产。
+                </p>
+                <div class="wallet-features">
+                    <div class="wallet-feature">
+                        <div class="wallet-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <span>MetaMask、WalletConnect、Coinbase Wallet</span>
+                    </div>
+                    <div class="wallet-feature">
+                        <div class="wallet-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <span>多设备实时同步</span>
+                    </div>
+                    <div class="wallet-feature">
+                        <div class="wallet-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <span>生物识别认证支持</span>
+                    </div>
+                    <div class="wallet-feature">
+                        <div class="wallet-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            </svg>
+                        </div>
+                        <span>支持 20+ 区块链网络</span>
+                    </div>
+                </div>
+                <div style="margin-top: 32px;">
+                    <a href="pages/wallet.html" class="btn-primary">了解更多</a>
+                </div>
+            </div>
+
+            <div class="wallet-showcase">
+                <div class="wallet-card">
+                    <div class="wallet-header">
+                        <span class="wallet-name">已连接钱包</span>
+                        <span class="wallet-status">活跃</span>
+                    </div>
+                    <div class="wallet-balances">
+                        <div class="balance-item btc">
+                            <div class="token">BTC</div>
+                            <div class="amount">1.2456</div>
+                        </div>
+                        <div class="balance-item eth">
+                            <div class="token">ETH</div>
+                            <div class="amount">18.392</div>
+                        </div>
+                    </div>
+                    <div class="wallet-actions">
+                        <div class="wallet-action">发送</div>
+                        <div class="wallet-action">接收</div>
+                        <div class="wallet-action">兑换</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 信任指标 -->
+    <section class="trust-section" id="trust" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                        <path d="M22 4L12 14.01l-3-3"/>
+                    </svg>
+                    全球信赖
+                </span>
+                <h2>行业领先认证</h2>
+                <p>经全球最严格的安全审计机构验证</p>
+            </div>
+
+            <div class="trust-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>SOC 2 Type II</h3>
+                    <p>独立安全公司年度审计</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <path d="M14 2v6h6"/>
+                            <path d="M9 15l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>ISO 27001</h3>
+                    <p>国际信息安全标准认证</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4"/>
+                            <path d="M12 8h.01"/>
+                        </svg>
+                    </div>
+                    <h3>渗透测试</h3>
+                    <p>定期漏洞赏金和红队演练</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="8.5" cy="7" r="4"/>
+                            <path d="M20 8v6"/>
+                            <path d="M23 11h-6"/>
+                        </svg>
+                    </div>
+                    <h3>50万+ 用户</h3>
+                    <p>从个人投资者到机构用户</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="pages/trust.html" class="btn-ghost" style="padding: 14px 28px; font-size: 15px;">查看全部认证</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>准备好守护您的数字未来了吗？</h2>
+                <p>加入 50 万 + 用户信赖的 CryptoSecure</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary" style="padding: 16px 32px; font-size: 16px;">
+                        免费创建账户
+                    </a>
+                    <a href="#" class="btn-ghost" style="padding: 16px 32px; font-size: 16px;">
+                        联系销售
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <div id="footer-placeholder"></div>
+
+    <!-- 脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <!-- 动态加载组件 -->
+    <script>
+        // 加载导航栏
+        fetch('components/nav.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('nav-placeholder').outerHTML = html;
+            });
+
+        // 加载页脚
+        fetch('components/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').outerHTML = html;
+            });
+    </script>
+</body>
+</html>
